@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package demo;
+
+// Amount transfer request form user
+message TransferRequest {
+    string number = 1;
+    int64 amount = 3;
+}
+
+// Transfer Acknowledgement
+message TransferResponse {
+    string number = 1;
+    string acknowledgement = 2;
+}
+
+// An amount transfered by an user to be stored in state
+message AmountTransfered {
+    int64 amount = 1;
+}
+
+
